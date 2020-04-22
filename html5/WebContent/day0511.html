@@ -2,9 +2,46 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>타임아웃 예제-1*****얘네 중요함!!</title>
 </head>
 <body>
-
+	<button onclick ="pushBtn1()">버튼1</button>
+	<button onclick = "pushBtn2()">버튼2</button>
+	</br>
+	<button onclick ="pushBtn3()">버튼3</button>
+	<button onclick = "pushBtn4()">버튼4</button>
+	<button onclick = "location.replace('https://naver.com')">네이버로 이동</button> 
+	<button onclick = "location.href='https://daum.net'">다음으로 이동</button>
+	<script>
+		function wConsole() {
+			console.log("출력");
+			}
+		
+		let pb;
+		function pushBtn1() {
+			pb =  setTimeout(wConsole,2000); 
+			//2번째 매개변수의 시간이 흐른 뒤 첫 번째 매개변수의 함수가 실행된다.
+		}
+		
+		function pushBtn2() {
+			clearTimeout(pb); 
+			//setTimeout으로 설정된 것을 해제, 반드시 변수에 저장되어야지만 clear 가능하다.
+		}
+		
+		let pb2;
+		function pushBtn3() {
+			pb2 = setInterval(function(){console.log("인터벌 출력")}, 1000); //1초 간격으로 계속 출력.
+		}
+		
+		function pushBtn4() {
+			clearInterval(pb2); //interval 중지. //배너에서 많이 사용함.
+		}
+		
+		console.log(screen.availWidth);
+		console.log(screen.availHeight);
+		console.log(screen.width);
+		console.log(screen.height);
+		
+	</script>
 </body>
 </html>
