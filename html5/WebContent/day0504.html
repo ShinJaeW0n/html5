@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>겟엘리먼트 예제-1</title>
+</head>
+<body>
+	<h3>안녕하세요</h3>
+	<h3 class = "text">안녕하세요</h3>
+	<h3 class = "text">안녕하세요</h3>
+	<script>
+		let tags = document.getElementsByTagName("h3"); //단일 태그가 아닐시에는 배열로 리턴.
+		for(let i = 0; i<tags.length; i++){
+			tags[i].innerText = "Hello";
+			tags[i].style.background = "#00" + i*33 + "00"; //003300, 006600
+		}
+		
+		let texts = document.getElementsByClassName("text");
+		for(let i = 0; i<tags.length; i++){
+			texts[i].style.color = "white";
+		}
+					//querySelector 선택자를 쓰는게 더 낫다.
+		let query = document.querySelector("h3");
+		query.innerText = "안녕하세요.";
+		
+		let querys = document.querySelectorAll("h3");
+		for(let i = 0; i<querys.length; i++){
+			querys[i].innerText = "자바스크립트";
+		}
+		
+		let querys = document.querySelectorAll(".text");
+		for(let i = 0; i<querys.length; i++){
+			querys[i].style.fontSize = "30px";
+		}
+		
+		document.firstChild.innerText = "가나다";
+		
+	</script>
+</body>
+</html>

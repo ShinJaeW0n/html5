@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>함수형예제-1</title>
+</head>
+<body>
+	<button onclick="myCar.addSpeed()">가속</button>
+	<button onclick="myCar.subSpeed()">가속</button>
+	<script>
+		let myCar = { // []대괄호는 배열, {} 중괄호는 클래스
+				//필드
+				company : "현대자동차", // 키 값은 ""로 감싸도 되고 생략해도 된다.
+				color : "red",			// 값은 문자열일 경우 반드시 ""로 감싸야만 합니다.
+				model : "그랜저",
+				maxSpeed : 350,
+				speed : 0,
+				//메소드
+				addSpeed : function () {
+					this.speed +=10;
+					console.log(this.speed);
+				},
+				subSpeed : function () {
+					this.speed -=10;
+					console.log(this.speed);
+				},
+				
+				//매개변수를 넣어주게 될 때
+				//변수에 무명함수를 넣어주면 함수가 된다?
+				moveSpeed : function(x){
+					this.speed += x;
+					console.log(this.speed);
+					
+				},
+				
+				
+				
+		};
+		//출력
+		console.log(myCar.company);
+		console.log(myCar.color);
+		console.log(myCar.speed);
+		myCar.moveSpeed(100);
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+	<title>2일차 DIV예제 2</title>
+		<style>
+			*{
+				margin : 0;
+				padding : 0;
+				text-decoration : none;
+				list-style : none;
+			}
+			
+			div {
+				font-size : 30px;
+				text-align : left;
+				line-height : 200px; /*세로 정렬 줄 맞춤*/
+				display : block; 
+				width : 200px; /*컨텐츠의 너비*/
+				height : 200px;	/*컨텐츠의 높이*/
+				}
+			
+				/*css는 위에서 부터 시계방향으로 적용된다.*/
+			#box1 {
+				background : orange;
+				padding : 30px 50px 20px 10px; /*내부 여백, 패딩*/
+				
+				/* 
+				padding
+				1개 값을 입력하면 4개 방위 모두 적용
+				2개 값을 입력하면 첫 번째 값은 위와 아래, 두 번째 값은 오른쪽과 왼쪽값이 된다.	
+				3개 값을 입력하면 첫번째 값은 위, 두번째 값은 오른쪽과 왼쪽, 세번째 값은 아래쪽이된다.
+				4개 값은 상, 우, 하, 좌 순으로 입력.
+				padding-top : 30px; 상단 내부 여백
+				padding-right : 30px; 우측 내부 여백 
+				padding-bottom : 30px; 하단 내부 여백
+				padding-left : 30px; 좌측 내부 여백
+				*/
+			
+				border : 20px solid lightskyblue; /*외곽선*/ 
+				
+				/*
+					border
+					첫 번째 값은 선의 두께를 의미
+					두 번째 값은 선의 종류를 의미
+					세 번째 값은 선의 색상을 의미
+					3가지 값은 순서와 상관없이 사용할 수 있습니다.
+					
+					border-color : red; ->선의 색상
+					border-width : 1px; 선의 두께
+					border-style : solid; <-선의 종류
+					
+					각각의 속성을 지정해도 되고 border를 사용하여 한 번에 지정해도 됩니다.
+					
+					border-top : 1px solid red; 상단외곽선
+					border-right : 1px solid red; 상단 우측 외곽선
+					border-bottom : 1px solid red; 하단 좌측 외곽선
+					border-left : 1px solid red; 좌측 외곽선
+					border-top-color : blue; <- 조합도 가능
+					
+					외곽선의 종류
+					solid: 실선 <- 제일 많이씀.
+					doubled: 두 줄
+					dotted: 점선
+					dashed: 끊어진 실선
+					groove:
+					ridge:
+					inset:
+					outset: 
+				*/
+					border-style: outset;
+					
+					margin: 50px; /*패딩이랑 똑같음. 외부 여백*/
+					box-sizing:content-box; /*박스사이즈의 기준은 컨텐츠 사이즈로 하겠다.*/
+				  /*box-sizing:border-box; - 박스 사이즈는 border 까지이다. */
+					}
+			
+			
+			#box2{
+				background : pink;
+			}
+			
+			#box3{
+				display : none;
+			}
+		</style>
+	
+	</head>
+<body>
+	<div id = "box1">box1</div>
+	<div id = "box2">box2</div>
+	<div id = "box3">box3</div>
+
+</body>
+</html>

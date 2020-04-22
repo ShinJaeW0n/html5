@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>prompt 예제-1</title>
+	
+
+
+</head>
+<body>
+	
+	<script>//confirm 말고는 잘 사용ㄴ
+		//prompt()를 사용하면 문자열이 입력된다.
+		let x = prompt("x의 값을 입력해주세요" , "정수만 입력 가능합니다."); //첫 스트링 : 지문 , 두번째 스트링 : 내부에 입력되는 value값.
+		let y = prompt("y의 값을 입력해주세요" , "실수는 입력하지 마세요.");
+		x = parseInt(x); //정수로 변경할때는 parseInt를 입력. 실수라면 parseIntdouble아니면 parseIntfloat
+		y = Number(y); //Number도 동일하게 숫자로 변환된다. 정수, 실수 가리지 않고 변환.
+		let result = x + y;
+		console.log(result);
+		//confirm을 사용하면 true, false의 값을 리턴한다.
+		let result2 = confirm("진행할까요?");
+		console.log(result2);
+		//alert()을 사용하면 경고창을 출력한다.
+		alert("경고창 사용");
+	</script>
+</body>
+</html>

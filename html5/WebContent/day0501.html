@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>자바스크립트 연관 배열예제-1</title>
+</head>
+<body>
+	<form name="myForm"> <!-- <- document.forms[0] --> 
+		<label>필드1</label><input type = "text" name = "a0"><br/>
+		<label>필드2</label><input type = "text" name = "a1"><br/>
+		<label>필드3</label><input type = "text" name = "a2"><br/>
+		<button type = "button" onclick = "init();">초기화</button>
+	</form>
+	<script>
+		function init() {
+			document.myForm.a0.value = 10; 
+			document.myForm.a1.value = 20;
+			//document.myForm.a2.value = 30;
+			document.forms[0].elements[0].value = 100;
+			document.forms[0].elements[1].value = 200;
+			document.forms[0].elements[2].value = 300;
+		}
+		</script>
+	</body>
+</html>

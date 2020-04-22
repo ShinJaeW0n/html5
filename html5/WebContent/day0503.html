@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>prompt 예제-2</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+			text-decoration: none;
+			list-style: none;
+		}
+	
+		p{
+			position: relative;
+			left: 50px;
+			top: 50px;
+			background: yellow;
+			color: #333;
+			border: 2px solid blue;
+			width: 300px;
+			height: 50px;
+			line-height: 50px;
+			text-align: center;
+		}
+	
+	</style>
+
+
+</head>
+<body>
+	<div>
+		<p><span id = "xValue"></span> + <span id = "yValue"></span> = <span id = "calc"></span></p>
+	</div>	
+	<script>//최상위 객체인 window는 생략한다.
+		let x = Number(prompt("x값"));
+		let y = parseInt(prompt("y값"));	//innerText - 모두 문자로 출력
+		document.getElementById("xValue").innerText = "<em>" + x + "</em>"; //innerText - 문자열을 변경할 때 사용합니다.
+		document.getElementById("yValue").innerText = y;
+		document.getElementById("calc").innerHTML ="<em>" + (x+y) + "</em>";//innerHTML은 태그가 적용된다.
+		console.log(document.getElementById("xValue").innerText); //값을 입력하지 않으면 값이 반환됩니다.
+	</script>
+</body>
+</html>

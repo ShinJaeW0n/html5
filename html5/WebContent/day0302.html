@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>3일차-div예제1</title>
+
+	<!-- html은 컨+쉬+f 로 자동정렬 기능 쓰지말기.-->
+	<style>
+		
+			/*얘는 기본으로 줘야함.*/
+		*{
+			margin: 0px;
+			padding: 0px;
+			text-decoration: none;
+			list-style: none;
+			
+		}
+		
+		.boxes{
+			width: 235px;
+			height: 200px;
+			border: 3px solid red;
+			margin: 12px;
+			padding: 6px;
+			float: left;
+		}
+		
+
+
+
+		.container{
+			width: calc(277px * 3); 	/*234+3+3+12+12+6+6 = 277*/
+			height: calc(242px * 2); 		/*200+3+3+12+12+6+6=242*/
+			background: pink;
+			overflow: hidden;
+		}
+	
+	</style>
+</head>
+
+
+<body>
+	<div class = "container">
+		<div class = "boxes">box1</div>
+		<div class = "boxes">box2</div>
+		<div class = "boxes">box3</div>
+		<div class = "boxes">box4</div>
+		<div class = "boxes">box5</div>
+		<div class = "boxes">box6</div>
+	</div>
+	
+
+</body>
+</html>

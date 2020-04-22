@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>2일차 DIV 예제4</title>					
+	<link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet"> 
+	<style> 					/*웹 폰트*/
+		*{
+			margin:0;
+			padding:0;
+			list-style: none;
+			text-decoration: none; /*앵커태그 밑줄 없게 하는 것.*/
+		}
+		
+		
+				/* 선택자 */
+		
+			/*메뉴 밑에 있는 자식 h3들 폰크 컬러 바꿔줌.*/
+		.menu > h3 {
+			color: blue;
+					
+			}
+			
+			/*메뉴의 자식 중엔 ul과 h3밖에 없기 때문에 like 자식은 선택안됨.*/
+			/*.menu < .like*/
+			
+		.menu .like{
+			color: green;
+		
+		}
+		
+		/*자기 뒤에 한개까지만*/
+		.like + li{
+			background: orange;
+		}
+		
+		/*자기 뒤에 나머지 다~*/
+		.like ~ li {
+			background: pink;
+		}
+		
+		
+		
+		#korea > li {
+			font-size: 20px;
+		}
+		
+		#korea > li:first-child {
+			color: red;
+		}
+		
+		#korea > li:last-child {
+			background: red;
+		}
+		
+		
+		
+		
+		#america > li:nth-child(2) { /*프로그래밍은 0부터 시작이지만 html은 1부터 시작합니다.*/
+			background: green;
+		}
+		
+		
+								/*홀 수 선택 */
+		#america > li:nth-child(2n-1) { /*프로그래밍은 0부터 시작이지만 html은 1부터 시작합니다.*/
+			background: skyblue;
+		}
+		
+					/*자식 중에 첫번째, 같은 타입 중에 첫번째*/
+		#china > li:first-of-type{
+			color: purple;
+		}
+			/*li두번째가 p태그여서 2번째 자식은 없다.*/
+		#thai > li:nth-child(2){
+			background: pink;
+		
+		}
+			/*같은 타입(li) 중에 2번째.*/
+		#thai > li:nth-of-type(2){
+			background: green;
+		}
+		
+		#thai > li:nth-last-child(1){
+			/*last가 붙으면 뒤에서 부터 앞으로 숫자를 셉니다.*/
+			font-style: italic;
+			font-weight: 900; 
+			
+			/*
+			
+			폰트의 굵기를 설정 100~900까지 사용합니다.
+			일반적으로 사용하는 굵기는 300이고(고딕)
+			가는 폰트는 100을 사용합니다.(세고딕)
+			조금 굵은 폰트는 500을 사용합니다.(중고딕)
+			700은 (견고딕)
+			900은 (태고딕)
+			
+			*/
+		}
+		
+		#thai > li:nth-last-of-type(){
+			/*last가 붙으면 뒤에서 부터 앞으로 숫자를 셉니다.*/
+			
+		}
+		
+		h3 {
+			font-family:'궁서' ,'맑은 고딕' ,serif; /*여러 개의 글씨체를 설정했을때, 맨 앞에 거부터 적용한다.*/
+		}
+		
+		li{
+			font-family: 'Do Hyeon', sans-serif;
+			}
+	</style>
+</head>
+<body>
+	<div>
+		<ul>
+			<li class = "menu">
+				<h3>한식</h3>
+				<ul id = "korea">
+					<li>김치찌개</li>
+					<li>된장찌개</li>
+					<li class = "like">비빔밥</li>
+				</ul>
+			</li>
+			<li class = "menu">
+				<h3>양식</h3>
+					<ul id = "america">
+						<li class = "like">파스타</li>
+						<li>피자</li>
+						<li>스테이크</li>
+					</ul>
+				</li>
+			<li class = "menu">
+				<h3>중식</h3>
+					<ul id = "china">
+						<li>짜장면</li>
+						<li>짬뽕</li>
+						<li class = "like">탕수육</li>
+					</ul>
+				</li>
+			<li class = "menu">
+				<h3>일식</h3>
+					<ul id = "japan">
+						<li>초밥</li>
+						<li>라멘</li>
+						<li class = "like">와규</li>
+					</ul>
+			</li>
+			
+			<li class = "menu">
+				<h3>태국</h3>
+					<ul id = "thai">
+						<li class = "t">쌀국수</li>
+						<p class = "t">커리</p>
+						<li class = "t">팟타이</li>
+						<p class = "t">빵</p>
+						<li class = "t">볶음밥</li>
+					</ul>
+				</li>
+			</ul>
+	</div>
+</body>
+</html>

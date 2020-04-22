@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>프롬프트 예제-2</title>
+
+</head>
+<body>
+	<button onclick = "result = add(x, y); console.log(result)">x와 y의 합계</button>
+	<script>
+		var sum = 0, x = 0, y = 0;
+		let result = 0;
+				//자바와 다르게 매개변수의 변수를 적어주지 않는다.
+		function add(x , y) {
+			sum = parseInt(x) + parseInt(y);
+			alert(sum);
+			return sum; //리턴이 가능하다.
+		}
+	
+		x = prompt("정수를 입력하시오" , "x값");
+		y = prompt("정수를 입력하시오", "y값")
+		</script>
+
+</body>
+</html>
