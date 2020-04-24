@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>blur, focus, change</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+			text-decoration: none;
+			list-style: none;
+		}
+		
+		.container{
+			width: 400px;
+			height: 300px;
+			border: 5px double #333;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			margin-left: -200px;
+			margin-right: -150px; 
+			
+		
+		}
+		
+		#userID , #userPW{
+			position:relative;
+			width: 200px;
+			height: 50px;
+			left: 0;
+			top: 0;
+		
+		}
+		
+	
+		
+		#userIDL , #userPWL{
+			position:relative;
+			display:inline-block;
+			width: 100px;
+			height: 50px;
+			line-height: 50px;
+			text-align: center;
+		
+		}
+		
+		input[type="submit"]{
+			width: 300px;
+			height: 50px;
+			margin-left: 50px;
+		
+		}
+	
+	/*주소 숨겨지는건 post, 주소로 알려주는건 get*/
+	</style>
+</head>
+<body>
+	<div class = "container"> 
+	<form method = "post" action="day0603.jsp">
+		<div> <!-- for : userID로 가라는 뜻. 아이디(레이블)을 클릭했을때 아이디 창으로 이동해주는 것. -->
+			<label id = "userIDL" for = "userID">아이디</label>
+			<input id = "userID" type = "text" placeholder="아이디를 입력하세요" name = "uId" autocomplete="off" required="required"/>
+		
+		</div>
+		<div>
+			<label id = "userPWL" for = "userPW">비밀번호</label>
+			<input id = "userPW" type = "password" placeholder="비밀번호를 입력하세요" name = "uPw" autocomplete="off" required="required"/>
+		</div>
+		<div>
+			<input type = "submit" value ="로그인" />
+		</div>
+	</form>
+	</div>
+	<script src = https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.5.0.js></script>
+	<script>
+		$(function() {  //포커스는 선택되는것.
+// 			$("#userID").focus(function() {
+// 				alert("아이디를 입력하세요");
+// 			});
+			$("#userPW").blur(function() { //블러는 선택을 해제하는 것.
+				alert("비밀번호를 입력하셨죠?");
+			});
+		
+			$("#userID").change(function() { //value 속성값이 변경되는 경우
+				$(this).css("background" , "pink");
+			});
+			
+		});
+	
+	</script>
+</body>
+</html>

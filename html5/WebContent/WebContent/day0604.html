@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>마우스이벤트-3</title>
+	<style>
+		body{
+			background-color: #eef;
+		}	
+		
+			div{
+				padding: 20px;
+			}
+	</style>
+</head>
+<body>
+	<div id = "log1"></div>
+	<div id = "log2"></div>
+	<div id = "log3"></div>
+	<div id = "log4"></div>
+		<script src = https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.5.0.js></script>
+	<script>
+		$(document).mouseover(function(e) {
+			$("#log1").text("e.pageX:" + e.pageX + ", e.pageY : " + e.pageY);
+			$("#log2").text("e.clientX:" + e.clientX + ", e.pageY : " + e.clientY);
+			$("#log3").text("e.offsetX:" + e.offsetX + ", e.pageY : " + e.offsetY);
+			$("#log4").text("e.screenX:" + e.screenX + ", e.screenY : " + e.screenY); //화면 전체의 위치
+		});
+	</script>
+</body>
+</html>

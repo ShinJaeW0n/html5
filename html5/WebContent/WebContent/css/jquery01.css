@@ -1,0 +1,99 @@
+@charset "UTF-8";
+
+
+body{
+	margin: 20px;
+	padding: 20px; 
+	min-width: 550px; /*최소의 너비, 최소한 550은 유지해야한다는 뜻.*/
+	font-size: 1rem; /*1rem = 16px*/
+	background: #f1f1f1; /*약간의 회색*/
+	
+}
+
+.container{
+	
+	min-width: 720px;
+	
+}
+
+.title{
+	
+	font-size: 1.5rem;
+	font-weight: 300;
+	color: #555;
+	
+}
+
+.container{
+	
+	margin-top: 35px;
+}
+
+/*클리어 픽스.*/
+.container::before, .container::after{
+	content :"";
+	display: block;
+	
+	
+}
+
+.container::after{
+	clear: both;
+	
+}
+
+nav{
+	font-size: 0.875rem;
+}
+
+nav > ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;	
+	
+}
+
+nav li {
+	position: relative;
+	float: left;
+	width: 180px;
+	height: 38px;
+}
+
+nav li a {
+	display: block; /*한 개의 영역 전체를 감싼다.*/
+	width: 100%; /*180*/
+	line-height: 38px;
+	text-align: center;
+	text-decoration: none;
+	background: #8ac007;
+	color: #fff;
+}
+
+nav li a:hover , nav li a.on{
+	
+	background: #6c8532;
+}
+
+nav ul ul {
+	
+	display: none; /*밑에 메뉴창 안보이게 하는 것.*/
+	position: absolute;
+	top: 38px; /*창을 38 씩 내린다.*/
+}
+
+nav ul ul li a {
+	background: #fff;
+	color: #555;
+	border-top: 1px solid #eaeaea;
+	
+}
+
+nav ul ul li:first-child a {
+	border-top: none; /*맨 처음창에는 줄을 긋지말라. */
+	
+}
+nav ul ul li a:hover, .nav ul ul li a.on{
+	background: #eaeaea;
+	color: #333;
+}

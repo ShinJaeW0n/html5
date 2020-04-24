@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>마우스이벤트-1</title>
+	<style>
+		
+		/*div중에 클래스가 .out인것.*/
+		/* # - div중에 id가 out인것.*/
+		/* 띄어쓰기 - 후속생성자, > - 자식생성자*/
+		div.out{
+			width : 200px;
+			height: 200px;
+			background-color: yellow;
+			}
+	
+	</style>
+	<script src = "https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.5.0.js"></script>
+
+</head>
+<body>
+	
+	<div class = "out">
+		<p>마우스 이벤트</p>
+	</div>
+	
+	<script>
+		$(function){
+		$("div.out").mouseover(function(e)){
+			let x = e.offsetX;
+			let x = e.offsetY;
+			$("p:first").text("mouse over" + x + "," + y);
+			});
+			$("div.out").mouseout(function){
+				$("p").text("mouse out");
+			});
+			$("div.out").click(function){
+				$("p").text("mouse click");
+			});
+			$("div.out").dbclick(function){
+				$("p").text("mouse double click");
+			});
+			$("div.out").contextmenu(function){
+				$("p").text("mouse right click");
+			});
+		});
+		});
+		
+	</script>
+</body>
+</html>

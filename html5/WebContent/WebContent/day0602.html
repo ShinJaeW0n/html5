@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>마우스이벤트-2</title>
+	<style>
+		div.out{
+			width: 200px;
+			height: 200px;
+			background-color: yellow;
+		}
+		
+		.inner{
+			width: 100px;
+			height: 100px;
+			background-color: pink; 
+			
+		
+		}
+	
+	</style>
+
+</head>
+<body>
+	<div class = "out"><div class = "inner">마우스이벤트</div></div>
+<script src = https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.5.0.js></script>
+
+	<script>
+		$(function(){
+			$(".out")mouseleave(function() {
+				$(".inner").text("out"); //내부의 다른곳으로 빠져나가는것
+			});
+			$(".out")mouseleave(function() {
+				$(".inner").text("leave"); //완전히 밖으로 빠져나가는것
+			});
+			$(".out")mouseleave(function() {
+				$(".inner").text("enter");
+			});
+			$(".out")mouseleave(function() {
+				$(".inner").text("down"); //꾹 누르고 있는것
+			});
+			$(".out")mouseleave(function() {
+				$(".inner").text("up"); // 마우스를 떼면
+			});
+		});
+		
+	</script>
+</body>
+</html>

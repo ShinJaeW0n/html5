@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>fade,slide 예제</title>
+	<style>
+	
+		#box, #box2{
+			width: 300px;
+			height: 300px;
+			background-color: orange;
+			
+		}
+		
+		#box2 {
+			background-color: blue;
+			
+		}
+	
+	</style>
+
+</head>
+<body>
+	<div>
+		<button id = "Btn1">fadeIn</button>
+		<button id = "Btn2">fadeOut</button>
+		<button id = "Btn3">fadeToggle</button>
+	
+	</div>
+	<div>
+		<button id = "Btn4">투명도 25%</button>
+		<button id = "Btn5">투명도 50%</button>
+		<button id = "Btn6">투명도 75%</button>
+	
+	</div>
+	<div>
+		<button id = "Btn7">slideDown</button>
+		<button id = "Btn8">slideUp</button>
+		<button id = "Btn9">slideToggle</button>
+	</div>
+	<div id = "box"></div>
+	<div id = "box2"></div>
+		<script src = "js/jquery-3.5.0.min.js"></script>
+		
+		<script>
+			$(function (){
+				$("#Btn1").click(function() {
+					$("#box").fadeIn(2000);
+				});
+				$("#Btn2").click(function() {
+					$("#box").fadeOut(1000);
+				});
+					
+				$("#Btn3").click(function() {
+					$("#box").fadeToggle("slow");
+				});
+					
+				$("#Btn4").click(function() {
+					$("#box").fadeTo("slow" , 0.25);
+				});
+					
+				$("#Btn5").click(function() {
+					$("#box").fadeTo(1000, 0.5);
+				});
+				$("#Btn6").click(function() {
+					$("#box").fadeTo(500, 0.75);
+				});
+				
+				$("#Btn7").click(function() {
+					$("#box").slideDown("fast");
+				});
+				$("#Btn8").click(function() {
+					$("#box").slideUp("normal");
+				});
+					
+				$("#Btn9").click(function() {
+					$("#box").slideToggle("slow");
+				});
+			});
+			
+					
+				
+					
+				
+		
+		</script>
+</body>
+</html>
