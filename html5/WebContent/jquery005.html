@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>마우스휠 예제</title>
+</head>
+<body>
+	<h2></h2><br/>
+	<h2></h2><br/>
+	<button>버튼</button>
+	
+	<script src = "js/jquery-3.5.0.min.js"></script>
+	<script>
+		$(function() {
+			$("html , body").on("mousewheel" , function(e){
+				$("h2:first").text(e.originalEvent.wheelDelta); //크롬, 익스플로러
+			});
+			
+			$("html , body").on("DOMMouseScroll" , function(e){
+				$("h2:last").text(e.originalEvent.wheelDelta);
+			});
+				 //파이어폭스
+			
+			$("button").bind("click mouseenter", function() {
+				console.log("click");
+			});
+			
+			
+			$("html , body").on("mousewheel DOMMouseScroll" , function(e){
+				if(e.originalEvent.wheelDelta == 120 || e.originalEvent.detail == -3){
+					console.log("wheel up");
+				}else if(e.originalEvent.wheelDelta == -120 || e.originalEvent.detail == 3){
+					console.log("wheel down");
+				}
+			});		
+			
+			});				
+			
+	
+	</script>
+</body>
+</html>
