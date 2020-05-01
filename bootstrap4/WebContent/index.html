@@ -10,9 +10,10 @@
 	<link rel= "stylesheet" href = "css/index.css" />
     <title>자기소개 웹사이트</title>
   </head>
+  
   <body>
 
-	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
 	<div class="container">
 		<a class="navbar-brand" href="index.html">신재원</a> <!-- 내 이름을 눌렀을때 인덱스로 이동해라. -->
 		<button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -25,7 +26,7 @@
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="navbar-nav ml-auto">
 				
-				<li class="nav-item"><a class="nav-link" href="#home">메인<span class="sr-only">(current)</span></a>
+				<li class="nav-item active"><a class="nav-link" href="#home">메인<span class="sr-only">(current)</span></a>
 				</li>
 				
 				<li class="nav-item">
@@ -44,26 +45,226 @@
 			
 		</div>
 		</div>
-	</nav>
-	<section class = "container mt-5">
+	</nav>								<!-- nbsp 스페이스바 한칸 띄우는거 -->
+	<section class="blink-top" id="home">&nbsp;</section>
+	<section class = "container mt-5" >
 		<div class = "text-center">										<!-- w-25 50 75 100으로 사이즈 조절 가능 -->
 			<img src = "images/cat.jpg" class = "img-fluid mb-3 round-circle w-25" />
 			<h2>신재원</h2>
-			<img src = "images/cloud.svg" class = "img-fluid mr-2" /><p class = "d-inline mr-3">자바전문가</p>
-			<img src = "images/activity.svg" class = "img-fluid mr-2" /><p class = "d-inline mr-3">디비설계자</p>
-			<img src = "images/feather.svg" class = "img-fluid mr-2" /><p class = "d-inline">웹 프로그래머</p>
+			<img src = "images/cloud.svg" class = "img-fluid mr-2" /><p class = "d-inline mr-2">자바전문가</p>
+			<img src = "images/activity.svg" class = "img-fluid mr-2" /><p class = "d-inline mr-2">디비설계자</p>
+			<img src = "images/feather.svg" class = "img-fluid mr-2" /><p class = "d-inline" id="career">웹 프로그래머</p>
 		
 		</div>
 	</section>
 
-
-
-
+	<section class = "bg-white text-dark mt-5 mb-3 pt-5 pb-4" ><!-- 경력 섹션 영역 -->
+		<div class = "text-center">				<!-- d-inline 디스플레이를 인라인으로. -->
+			<div class = "container text-left mb-5" style = "max-width: 480px;">
+				<h2>수상경력</h2>
+				<ul>
+					<li>2018 올해의 인재상</li>
+					<li>2018 화이트 해킹 초코하임 상</li>
+					<li>2018 수학경진대회 우수상	</li>
+					<li>2018 산업디자인 대회 금상</li>
+				</ul>
+		</div>
+		<div class = "container text-left mb-5" style = "max-width: 480px;">
+			<h2>활동경력</h2>
+				<ul>
+				<li>머티리얼 디자인 교재 집필진</li>
+				<li>서당 천자문 교재 집필진</li>
+				<li>최진사댁 셋째 딸 보쌈 연구진</li>
+				<li>흥부네 박씨 개발자</li>
+			</ul>
+		</div>
+	</div>	
+	</section>
+	
+	<section class = "mt-5 mb-3 pt-5 pb-4" id="portfolio">
+		<div class = "container">
+			<h2 class="text-center mb-5">포트폴리오</h2>
+			<div class="card-deck">
+  				<div class="card">
+    			<img src="images/cat.jpg" class="card-img-top" alt="...">
+    			<div class="card-body">
+     				<h5 class="card-title"> 포트폴리오1번</h5>
+      					<p class="card-text">포트폴리오에 대한 설명입니다.</p>
+      					
+  				</div>
+ 				 </div>
+ 				 <div class="card">
+    			<img src="images/cat.jpg" class="card-img-top" alt="...">
+    			<div class="card-body">
+     				<h5 class="card-title"> 포트폴리오2번</h5>
+      					<p class="card-text">포트폴리오에 대한 설명입니다.</p>
+      					
+  				</div>
+ 				 </div>
+ 				 <div class="card">
+    			<img src="images/cat.jpg" class="card-img-top" alt="...">
+    			<div class="card-body">
+     				<h5 class="card-title"> 포트폴리오3번</h5>
+      					<p class="card-text">포트폴리오에 대한 설명입니다.</p>
+      					
+  				</div>
+ 				 </div>
+ 				 <div class="card">
+    			<img src="images/cat.jpg" class="card-img-top" alt="...">
+    			<div class="card-body">
+     				<h5 class="card-title"> 포트폴리오1번</h5>
+      					<p class="card-text">포트폴리오에 대한 설명입니다.</p>
+      					
+  				</div>
+ 				 </div>
+ 				 
+  					</div>
+  					
+  					<div class="card-deck mt-5">
+  				<div class="card">
+    			<img src="images/cat.jpg" class="card-img-top" alt="...">
+    			<div class="card-body">
+     				<h5 class="card-title"> 포트폴리오1번</h5>
+      					<p class="card-text">포트폴리오에 대한 설명입니다.</p>
+      					
+  				</div>
+ 				 </div>
+ 				 <div class="card">
+    			<img src="images/cat.jpg" class="card-img-top" alt="...">
+    			<div class="card-body">
+     				<h5 class="card-title"> 포트폴리오2번</h5>
+      					<p class="card-text">포트폴리오에 대한 설명입니다.</p>
+      					
+  				</div>
+ 				 </div>
+ 				 <div class="card">
+    			<img src="images/cat.jpg" class="card-img-top" alt="...">
+    			<div class="card-body">
+     				<h5 class="card-title"> 포트폴리오3번</h5>
+      					<p class="card-text">포트폴리오에 대한 설명입니다.</p>
+      					
+  				</div>
+ 				 </div>
+ 				 <div class="card">
+    			<img src="images/cat.jpg" class="card-img-top" alt="...">
+    			<div class="card-body">
+     				<h5 class="card-title"> 포트폴리오1번</h5>
+      					<p class="card-text">포트폴리오에 대한 설명입니다.</p>
+      					
+  				</div>
+ 				 </div>
+ 				 
+  					</div>
+  					</div>
+					</section>
+	
+	<section class = "text-dark mt-5 py-5" id="contect">
+		<div class = "container"> <!-- 좌우여백 -->
+			<div class = "row"> <!-- 부트스트랩에서 한 줄을 만들기 위해 사용 -->
+				<div class = "col-lg-6"> <!-- 라지 사이즈에서 6칸을 사용하라. -->
+					<h2 class = "mt-5">연락처</h2>
+					<div class = "d-flex flex-row"> <!-- 플렉스 박스 , 정렬을 도와주는 디스플레이-->
+						<div class = "p-3 align-self-start"> <!-- 좌측 정렬 -->
+							<img src = "images/check-circle.svg" /> <!-- 이미지는 좌측 정렬 -->
+						</div>		<!-- 글의 마지막은 오른쪽 하단임. 그래서 글자는 우측 정렬을 뜻함. -->
+						<div class = "p-3 align-self-end" style = "text-align : justify">
+							JSP 기반 웹 사이트 개발 문의
+						</div>
+						</div>
+						<div class = "d-flex flex-row"> <!-- 플렉스 박스 , 정렬을 도와주는 디스플레이-->
+						<div class = "p-3 align-self-start"> <!-- 좌측 정렬 -->
+							<img src = "images/check-circle.svg" /> <!-- 이미지는 좌측 정렬 -->
+						</div>		<!-- 글의 마지막은 오른쪽 하단임. 그래서 글자는 우측 정렬을 뜻함. -->
+						<div class = "p-3 align-self-end" style = "text-align : justify">
+							응용 프로그램 애플리케이션 제작
+						</div>
+						</div>
+						<div class = "d-flex flex-row"> <!-- 플렉스 박스 , 정렬을 도와주는 디스플레이-->
+						<div class = "p-3 align-self-start"> <!-- 좌측 정렬 -->
+							<img src = "images/check-circle.svg" /> <!-- 이미지는 좌측 정렬 -->
+						</div>		<!-- 글의 마지막은 오른쪽 하단임. 그래서 글자는 우측 정렬을 뜻함. -->
+						<div class = "p-3 align-self-end" style = "text-align : justify">
+							DBMS 설계 및 구축
+						</div>
+						</div>
+						<div class = "d-flex flex-row"> <!-- 플렉스 박스 , 정렬을 도와주는 디스플레이-->
+						<div class = "p-3 align-self-start"> <!-- 좌측 정렬 -->
+							<img src = "images/check-circle.svg" /> <!-- 이미지는 좌측 정렬 -->
+						</div>		<!-- 글의 마지막은 오른쪽 하단임. 그래서 글자는 우측 정렬을 뜻함. -->
+						<div class = "p-3 align-self-end" style = "text-align : justify">
+							IOT 기반 애플리케이션 구현
+						</div>
+						
+					</div>
+				
+				</div>
+				<div class = "col-lg-6">
+				<h2 class = "mt-5">간편문의</h2>
+				&nbsp;
+			<form>
+  			<div class="form-group">
+    		<input type="text" class="form-control" id="User Name" placeholder="이름">
+    		</div>
+  			
+  			<div class="form-group">				<!-- 너비 100프로 이용 -->
+    			<textarea placeholder=" 문의내용" class = "w-100" style = "height:100px; resize = none;"></textarea>
+  			</div>
+  				
+  			<div class="form-group form-check">
+   			 <input type="checkbox" class="form-check-input" id="userAgree">
+    			<label class="form-check-label" for="userAgree">개인정보 활용에 동의합니다.</label>
+  			</div>
+  				<button type="submit" class="btn btn-primary btn-block">문의하기</button>
+				</form>
+				</div>
+			</div>
+		</div>
+	
+	</section>
+	<footer class = "container bg-dark text-white text-center py-5">
+		<div class = "footer-above">
+			<div class = "row">
+				<div class = "col-lg">
+					<h2 class = "text-white">위치</h2>
+					<p>회사위치</p>
+				</div>
+				<div class = "col-lg">
+					<h2 class = "text-white">소셜 미디어</h2>
+					<button onclick="location.href = 'http://www.twitter.com';">twitter</button>
+					<button>instagram</button>
+					<button>facebook</button>	
+				</div>
+				<div class = "col-lg">
+					<h2 class = "text-white">개발자 한마디</h2>
+					<p>언제든지 연락주세요</p>
+			</div>
+			</div>
+			</div>
+		
+		<div class = "container footer-below mt-4">
+			<p>Copyright 2020. 신재원 Co. All rights reserved</p>
+		</div>
+	
+	</footer>
 
 	<!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" ></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" ></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+    
+    <script>
+    	$(function () {
+			$(".navbar-nav > li > a").click(function () {
+				$(".navbar-nav > li").removeClass("active");
+				$(this).parent("li").addClass("active"); //부모에 애드클래스(액티브)한다.
+				$(".navbar-nav > li > a").find("span").appendTo($(this));
+				let page = $(this).attr("href");
+				let pos = $(page).offset().top;
+				console.log(pos);
+				$("html, body").animate({scrollTop: pos + "px"}, 500); //메뉴를 누르면 슬라이드로 밑에 내려가는거.
+			});
+		});
+    </script>
   </body>
 </html>

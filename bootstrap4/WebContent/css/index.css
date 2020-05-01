@@ -4,29 +4,33 @@
 	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-9Black.woff') format('woff'); 
 	font-weight: normal; font-style: normal; }
 
-@font-face { font-family: 'locus_sangsang'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/locus_sangsang.woff') format('woff'); 
-	font-weight: normal; 
-	font-style: normal; }
+@font-face { font-family: 'S-CoreDream-2ExtraLight'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-2ExtraLight.woff') format('woff'); 
+font-weight: normal; font-style: normal; } 
 
-body{
-	background-color: #C5E1A5;  /*900색상*/
-	
-}
+ body{
+	font-family: "S-CoreDream-2ExtraLight", san-serif;
+	background-color: #F6F6F6;  /*900색상*/
+	color:#00003F;
+ }
 
 
 
-h1,h2,h3,h4,.navbar-brand{
+h1,h2,h3,h4, .navbar-brand{
 	
 	font-family: "S-CoreDream-9Black", san-serif;
-
+	color: #00003F;
 }	
 
-h2{
-	color: 
-}
 
 .navbar{
 	
-	border-bottom: #66BB6A 3px solid;
+	border-bottom: #BDBDBD 3px solid;
+}
+
+#home{
+	width:100%;
+	height: 40px;
+
+	
 }
 	
