@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Form태그를 이용한 get방식</title>
+	<style>
+		#loginFormArea{
+			text-align: center;
+			width: 260px;
+			margin: auto;
+			border: 2px solid red;
+		
+		}
+		
+		h1{
+			text-align: center;
+		}
+	</style>
+
+</head>
+<body>
+	<h1>로그인</h1>
+	 <section id = "loginFormArea">	<!-- get과 post의 차이는 검색창에 뜨냐 안뜨냐의 차이 -->
+	 	<form action = "/jspStudy/login.do" method = "post">
+	 		<label id = "idL" for = "id">아이디:</label>
+	 							<!-- name이 파라미터의 키 값을 의미함*** -->
+	 		<input type = "text" name = "id" id = "id" /> <br />
+	 			<label id = "passwdL" for = "passwd">비밀번호:</label>
+	 				<input type = "password" name = "passwd" id = "passwd" />
+	 				<br /><br />
+	 				<input type = "submit" value = "로그인"> 	
+	 		</form>
+	 </section>
+</body>
+</html>
