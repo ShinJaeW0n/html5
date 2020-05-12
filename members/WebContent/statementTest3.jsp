@@ -27,7 +27,7 @@
 	
 		request.setCharacterEncoding("UTF-8");
 		String id = request.getParameter("id");
-		if(id != null){
+		if(id != null){ //조건 불만족시 else로 간다. , 처음에 만들면 아무것도 없기 때문에 else를 실행하게 된다.
 		String password = request.getParameter("password");
 		String name = request.getParameter("name");
 		int age = Integer.parseInt(request.getParameter("age"));
@@ -62,7 +62,7 @@
 		}
 	}else{
 %>
-
+	<!-- action이 없기 때문에 자기 자신에게 넘겨준다. -->
 	<form method = "post">
 	<div>
 		<label>아이디 : </label>
@@ -99,7 +99,7 @@
 </form>    
 
 <%
-	}	
+	}	//여기까지가 else 이다.
 
 %>
 
