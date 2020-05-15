@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JASON 예제-4</title>
+</head>
+<body>	
+	<h4>학생명단</h4>
+	<p style = "background-color: yellow;">
+		이름:<span id = "name"></span>&nbsp;
+		나이:<span id = "age"></span>
+	</p>
+	<script>
+		var s = '[' + //s는 문자열. string 
+			'{"name" : "Hong", "age" : "21"},' +
+			'{"name" : "Kim", "age" : "22"},' +
+			'{"name" : "Park", "age" : "23"}]';
+		//var students = eval(s); //eval메소드로 students 문자열이 코드로 변경됨.
+		var students = JASON.parse(s);
+		
+		students[1].name = "Lee";
+		document.getElementById("name").innerHTML = students[1].name; //kim, 22세가 나올거다.
+		document.getElementById("age").innerHTML = students[1].age; 
+	</script>
+	
+	<!-- 
+		문자열의 다른 표현 방법
+		var s = '[\ //역슬러시는 엔터를 뜻함
+		{"name" : "Hong", "age" : "21"},\
+		{"name" : "Kim", "age" : "22"},\
+		{"name" : "Kim", "age" : "22"},]\
+	 
+	 -->
+		
+		
+</body>
+</html>

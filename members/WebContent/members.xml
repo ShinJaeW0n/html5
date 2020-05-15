@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- XML 구조 -->
+<members>
+	<member>
+		<name>홍길동</name>
+		<age>20</age>
+		<grade>A</grade>
+	</member>
+	<member>
+		<name>이순희</name>
+		<age>25</age>
+		<grade>S</grade>
+	</member>
+	<member>
+		<name>강호동</name>
+		<age>30</age>
+		<grade>B</grade>
+	</member>
+	
+</members>
+<employee>
+	<member>
+		<name>홍길동</name>
+		<age>20</age>
+		<grade>A</grade>
+	</member>
+</employee>
+
+<!-- JASON구조 -->
+<!--  객체, 텍스트파일->문자열로 가지고 오게됨. 문자열을 코드화 시킬때는 메소드 활용 -> 텍스트가 객체로 사용할 수 있게 됨.-->
+
+{<!-- {} : 객체 -->
+
+	'members': [ <!-- [] : 배열 -->
+		{
+		 name :"홍길동",
+		 age : 20,
+		 grade : "A"
+		},{
+		
+		 name :"이순희",
+		 age : 25,
+		 grade : "S"
+		 },{
+		 name :"강호동",
+		 age : 30,
+		 grade : "B"
+		 }
+	],
+	
+	'employee' : ??	
+}
+

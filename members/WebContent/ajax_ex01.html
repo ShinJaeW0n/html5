@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Ajax예제-1</title>
+</head>
+<body>	<!-- //code for IE6, IE5 구버전 코드. 지금은 안씀. 그냥 예제라서 쓰는거임. -->
+	<div id = "target" style = "width: 300px; height: 60px; border: solid 1px gray;"></div>
+	<button type="button" onclick="getFromServer()">GET DATA</button>
+	<script>
+		function getFromServer() {
+			var req = new XMLHttpRequest();
+			req.onreadystatechange = function() { //왼쪽애가 펑션을 가지고 있다. 무명함수
+				if(req.readyState == 4 && req.status == 200){ //이 2가지를 충족시킬때
+					document.getElementById("target").innerHTML = req.responseText; //내부 정보를 바꿔준다. 
+				}									//innerText 작성도 가능.
+			}
+			req.open("GET", "text.jsp", true); //post,get 둘 중에 선택, 파일url 주소, 비동기화 방식을 사용할 것인가?
+			req.send();
+			
+		}
+	</script>
+</body>
+</html>
