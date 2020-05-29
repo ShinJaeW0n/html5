@@ -51,14 +51,12 @@
 			<br />
 			첨부파일: 
 			<%
-			if(article.getBoard_file()!=null) {
-// 				out.println("<a href='file_down?downFile=" + article.getBoard_file() + "'>" + article.getBoard_file() + "</a>");
-				out.println("<a download href='boardUpload/" + article.getBoard_file() + "'>" + article.getBoard_file() + "</a>");
-			}
-			%>
+			if(article.getBoard_file()!=null) { %>
+				<a href = "file_down.jsp?downFile=<%=article.getBoard_content()%>"><%=article.getBoard_content()%></a>
+			<% }%>
 		</article>
 		<article id="articleContentArea">
-			<%=article.getBoard_content() %>
+			<%=article.getBoard_file() %>
 		</article>
 	</section>
 	<section id="commandList">

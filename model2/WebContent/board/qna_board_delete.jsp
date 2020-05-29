@@ -25,28 +25,21 @@
 <body>
 
 	<section id = "passForm">
-		<h2>게시판글 수정</h2>
-		<form name = "deleteForm" action = "model2/boardDeletePro.do?board_num=<%=board_num%>" method="post" >
+		<h2>게시판글 삭제</h2>
+		<form name = "deleteForm" action = "boardDeletePro.do?board_num=<%=board_num%>" method="post" >
 			<input type = "hidden" name = "page" value = "<%=nowPage %>" />
 			
 			<table>
 				<tr>
-					<td>
-					<label>글 비밀번호: </label>
-					</td>
-					<td>
-					<input name = "board_pass" type = "password" >
-					</td>
-				</tr>
-				<tr>	
-					<td>
-					<input type = "submit" value = "삭제" />
-					&nbsp;&nbsp;
-					<input type = "button" value = "돌아가기" onClick="javascript:history.go(-1)" />
-					</td>
+					<td><label>글 비밀번호: </label></td>
+					<td><input id = "board_pass" name = "board_pass" type = "password" ></td>
 				</tr>
 				
 			</table>
+			<article>
+				<button type = "submit">삭제</button>&nbsp;&nbsp;
+				<button type = "button" onclick = "history.bakc()">돌아가기</button>
+			</article>
 		</form>
 	</section>
 	
